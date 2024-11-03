@@ -24,7 +24,7 @@ const knightMoves = (start,end) =>
         if (x === end[0] && y === end[1])
         {
             console.log(`You made it in ${path.length-1} moves, here is the breakdown :`)
-            path.forEach((step)) => console.log(step);
+            path.forEach((step) => console.log(step));
             return path
         }
 
