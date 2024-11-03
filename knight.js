@@ -35,7 +35,13 @@ const knightMoves = (start,end) =>
             const [newX,newY] = [x + dx, y + dy];
             if (newX >= 0 && newX < 8 && newY >=0 && newY < 8)
             {
+                const newPlace = [newX, newY];
 
+                if(!beenThere.has(newPlace.toString()))
+                {
+                    beenThere.add(newPlace.toString());
+                    queue.push([newPlace,[...path,newPlace]]);
+                }
             }
         }
     }
